@@ -5,4 +5,7 @@
  */
 export function uniq(arr) {
 
+  const newArray = [...new Set(arr)];
+
+  return newArray;
 }

@@ -5,4 +5,22 @@
  */
 export function invertObj(obj) {
 
+  if (obj === null) {
+    return;
+  }
+
+  if (typeof obj !== 'object') {
+    return;
+  }
+
+  if (Array.isArray(obj)) {
+    return;
+  }
+
+  let newObject = {};
+  for (const [key, value] of Object.entries(obj)) {
+    newObject[value] = key;
+  }
+
+  return newObject;
 }
